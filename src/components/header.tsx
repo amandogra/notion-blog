@@ -44,8 +44,10 @@ export default ({ titlePre = '' }) => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <div className={styles.inner}>
-        {' '}
-        <Image src="/logo.png" alt="Aman Dogra" width={300} height={115} />
+        <a href="/">
+          {' '}
+          <Image src="/logo.png" alt="Aman Dogra" width={300} height={115} />
+        </a>
         <ul>
           <li className={styles.toggletheme}>
             <input type="checkbox" id="toggleTheme" />

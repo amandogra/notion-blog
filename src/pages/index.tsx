@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
 import Features from '../components/features'
@@ -37,7 +38,8 @@ export default () => (
     <Header titlePre="Home" />
     <div className={sharedStyles.layout}>
       <div className={contactStyles.avatar}>
-        <img src="/avatar.png" alt="Aman Dogra" height={320} />
+        {' '}
+        <Image src="/avatar.png" alt="Aman Dogra" width={320} height={320} />
       </div>
       <h1>A piece of my head</h1>
       <h2>

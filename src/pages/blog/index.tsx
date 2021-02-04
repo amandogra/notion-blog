@@ -43,7 +43,7 @@ export async function getStaticProps({ preview }) {
       preview: preview || false,
       posts,
     },
-    unstable_revalidate: 10,
+    revalidate: 10,
   }
 }
 
@@ -62,7 +62,7 @@ export default ({ posts = [], preview }) => {
           </div>
         </div>
       )}
-      <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
+      <div className={`${blogStyles.blogIndex}`}>
         <h1>Blog</h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
@@ -70,19 +70,15 @@ export default ({ posts = [], preview }) => {
         {posts.map(post => {
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <div className={blogStyles.titleContainer}>
-                    {!post.Published && (
-                      <span className={blogStyles.draftBadge}>Draft</span>
-                    )}
-                    <a>{post.Page}</a>
-                  </div>
-                </Link>
-              </h3>
-              {post.Authors.length > 0 && (
-                <div className="authors">By: {post.Authors.join(' ')}</div>
-              )}
+              {' '}
+              <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                <div className={blogStyles.titleContainer}>
+                  {!post.Published && (
+                    <span className={blogStyles.draftBadge}>Draft</span>
+                  )}
+                  <h2>{post.Page}</h2>
+                </div>
+              </Link>
               {post.Date && (
                 <div className="posted">Posted: {getDateStr(post.Date)}</div>
               )}

@@ -1,5 +1,8 @@
 .blogIndex {
-  padding: 0 5%;
+  padding: 0 var(--gap);
+  max-width: 64rem;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .blogIndex h1 {
@@ -63,8 +66,8 @@
 }
 
 .postPreview {
-  max-width: 600px;
-  margin: 10px auto;
+  width: 100%;
+  margin: var(--gap) 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -72,9 +75,10 @@
   border-bottom: none;
 }
 
-.postPreview h3,
+.postPreview h2,
 .post h1 {
   margin-bottom: 0;
+  color: var(--fg);
 }
 
 .post h1 {
@@ -121,6 +125,8 @@
 
 .postPreview :global(.posted) {
   margin-bottom: 0.5em;
+  font-size: 0.875rem;
+  font-style: italic;
 }
 
 .post {
