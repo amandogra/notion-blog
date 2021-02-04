@@ -51,7 +51,7 @@ export default ({ titlePre = '' }) => {
         <ul>
           <li className={styles.toggletheme}>
             <input type="checkbox" id="toggleTheme" />
-            <label for="toggleTheme">&nbsp;</label>
+            <label htmlFor="toggleTheme">&nbsp;</label>
           </li>
           {navItems.map(({ label, page, link }) => (
             <li key={label}>
