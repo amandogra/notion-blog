@@ -1,6 +1,9 @@
+.layout {
+  padding: 0 var(--gap);
+}
 .layout img {
   margin: auto;
-  max-width: 98%;
+  max-width: 100%;
   display: block;
   height: auto;
 }

@@ -1,14 +1,20 @@
 .header {
   display: block;
-  min-height: 64px;
-  padding: 2em 0;
+  padding: var(--gap);
   text-align: center;
   letter-spacing: -0.02em;
+  flex-direction: column;
+}
+.inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .header ul {
   list-style: none;
   padding: 0;
+  text-align: right;
 }
 
 .header ul li {
@@ -16,18 +22,54 @@
   padding: 0 10px;
 }
 
+.toggletheme {
+  position: relative;
+}
+.toggletheme input[type='checkbox'] {
+  position: absolute;
+}
+.toggletheme input[type='checkbox'] + label,
+.toggletheme input[type='checkbox'] + label::after {
+  display: inline-block;
+  background-color: #e9c46a;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.toggletheme input[type='checkbox'] + label {
+  content: 'a';
+  transform: rotate(-25deg);
+  transition: background-color ease-out 250ms;
+}
+
+.toggletheme input[type='checkbox'] + label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background-color: var(--bg);
+  transition: transform ease-out 250ms;
+  transition-delay: 20ms;
+}
+.toggletheme input[type='checkbox']:checked + label {
+  background-color: #e76f51;
+}
+.toggletheme input[type='checkbox']:checked + label::after {
+  transform: translateY(-30%);
+}
 .header :global(a) {
-  color: var(--accents-3);
+  /* color: var(--accents-3); */
   font-weight: 400;
 }
 
-.header :global(a.active) {
-  color: #0070f3;
-  font-weight: 600;
-}
+/* .header :global(a.active) { */
+/* color: #0070f3; */
+/* font-weight: 600; */
+/* } */
 
 @media (max-width: 600px) {
   .header {
-    padding: .5em 0 2em;
+    padding: var(--gap-half);
   }
 }

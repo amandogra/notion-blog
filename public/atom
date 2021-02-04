@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Blog</title>
+    <subtitle>Blog</subtitle>
+    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/" />
+    <updated>2021-02-03T22:08:51.454Z</updated>
+    <id>My Notion Blog</id>
+    <entry>
+      <id>/blog/testing-notion-versel-nextjs</id>
+      <title>Testing Notion, Vercel and NextJS based Blog</title>
+      <link href="/blog/testing-notion-versel-nextjs"/>
+      <updated>2021-02-03T08:00:00.301Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/testing-notion-versel-nextjs">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Aman Dogra</name></author>
+    </entry>
+  </feed>
