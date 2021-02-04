@@ -63,22 +63,23 @@ export default ({ posts = [], preview }) => {
         </div>
       )}
       <div className={`${blogStyles.blogIndex}`}>
-        <h1>Blog</h1>
+        <h1 className="a11y">Blog</h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
         {posts.map(post => {
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
-              {' '}
-              <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                <div className={blogStyles.titleContainer}>
-                  {!post.Published && (
-                    <span className={blogStyles.draftBadge}>Draft</span>
-                  )}
-                  <h2>{post.Page}</h2>
-                </div>
-              </Link>
+              <div className={blogStyles.titleContainer}>
+                {!post.Published && (
+                  <span className={blogStyles.draftBadge}>Draft</span>
+                )}
+                <h2>
+                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                    {post.Page}
+                  </Link>
+                </h2>
+              </div>
               {post.Date && (
                 <div className="posted">Posted: {getDateStr(post.Date)}</div>
               )}

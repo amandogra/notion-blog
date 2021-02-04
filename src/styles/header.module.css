@@ -4,12 +4,14 @@
   text-align: center;
   letter-spacing: -0.02em;
   flex-direction: column;
+  position: fixed;
+  width: 100%;
+  background: var(--bg);
 }
 .inner {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  max-width: 64rem;
   margin: 0 auto;
 }
 

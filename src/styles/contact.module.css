@@ -1,14 +1,17 @@
+.hero {
+  max-width: 64rem;
+  margin: 4rem auto;
+  text-align: center;
+}
 .links {
   display: block;
-  margin: 1rem auto;
-  max-width: 500px;
-  text-align: center;
+  padding-top: 4rem;
 }
 
 .links a {
   width: 48px;
   height: 48px;
-  margin: 0 10px;
+  margin: 0 var(--gap-quarter);
   display: inline-block;
   transition: opacity 200ms ease;
 }
@@ -16,7 +19,9 @@
 .links a:hover {
   opacity: 0.6;
 }
-
+.textSection {
+  text-align: center;
+}
 .avatar {
   display: block;
   text-align: center;
@@ -27,11 +32,14 @@
   width: 320px;
   height: 320px;
 }
-
-.name {
-  text-align: center;
+.title {
+  max-width: 18rem;
+  margin: 0 auto 1rem;
+  line-height: 1;
 }
-
-.name a {
-  color: inherit;
+.subtitle {
+  color: var(--fg);
+  max-width: 18rem;
+  margin: 0 auto;
+  font-size: ;
 }

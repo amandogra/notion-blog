@@ -46,7 +46,7 @@ export default ({ titlePre = '' }) => {
       <div className={styles.inner}>
         <a href="/">
           {' '}
-          <Image src="/logo.png" alt="Aman Dogra" width={300} height={115} />
+          <Image src="/logo.png" alt="Aman Dogra" width={150} height={55} />
         </a>
         <ul>
           <li className={styles.toggletheme}>

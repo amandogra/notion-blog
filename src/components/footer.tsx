@@ -15,7 +15,7 @@ export default () => (
         , <ExtLink href="https://nodejs.dev">Node.js</ExtLink>
       </span>
       <span>
-        and{' '}
+        , and{' '}
         <ExtLink href="https://github.com/ijjk/notion-blog">
           Notion Blog boilerplate
         </ExtLink>

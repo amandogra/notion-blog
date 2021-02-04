@@ -1,14 +1,14 @@
 .layout {
   padding: 0 var(--gap);
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 .layout img {
   margin: auto;
   max-width: 100%;
   display: block;
   height: auto;
-}
-
-.layout h1,
-.layout h2 {
-  text-align: center;
 }
