@@ -2,7 +2,7 @@ import ExtLink from './ext-link'
 
 export default () => (
   <>
-    <footer>
+    <footer className="w-full text-center border-t border-grey p-4 pin-b">
       <span>&copy; Aman Dogra | </span>
       <span>
         Created with &#10084; using{' '}

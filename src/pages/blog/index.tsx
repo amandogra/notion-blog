@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '../../components/header'
 
-import blogStyles from '../../styles/blog.module.css'
-import sharedStyles from '../../styles/shared.module.css'
+// import blogStyles from '../../styles/blog.module.css'
+// import sharedStyles from '../../styles/shared.module.css'
 
 import {
   getBlogLink,
@@ -52,44 +53,51 @@ export default ({ posts = [], preview }) => {
     <>
       <Header titlePre="Blog" />
       {preview && (
-        <div className={blogStyles.previewAlertContainer}>
-          <div className={blogStyles.previewAlert}>
+        <div className="previewAlertContainer">
+          <div className="previewAlert">
             <b>Note:</b>
             {` `}Viewing in preview mode{' '}
             <Link href={`/api/clear-preview`}>
-              <button className={blogStyles.escapePreview}>Exit Preview</button>
+              <button className="escapePreview">Exit Preview</button>
             </Link>
           </div>
         </div>
       )}
-      <div className={`${blogStyles.blogIndex}`}>
+      <div className={'blogIndex'}>
         <h1 className="a11y">Blog</h1>
         {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
+          <p className="noPosts">There are no posts yet</p>
         )}
         {posts.map(post => {
           return (
-            <div className={blogStyles.postPreview} key={post.Slug}>
-              <div className={blogStyles.titleContainer}>
-                {!post.Published && (
-                  <span className={blogStyles.draftBadge}>Draft</span>
-                )}
+            <div className="postPreview" key={post.Slug}>
+              <div className="titleContainer">
+                {!post.Published && <span className="draftBadge">Draft</span>}
                 <h2>
                   <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
                     {post.Page}
                   </Link>
                 </h2>
-              </div>
-              {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
-              )}
-              <p>
-                {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
-                {(post.preview || []).map((block, idx) =>
-                  textBlock(block, true, `${post.Slug}${idx}`)
+                {post.Date && (
+                  <div className="posted">{getDateStr(post.Date)}</div>
                 )}
-              </p>
+              </div>
+              <div className="excerptContainer">
+                {post.Cover && (
+                  <a href={getBlogLink(post.Slug)}>
+                    <div className="cover">
+                      <Image
+                        src={post.Cover}
+                        alt=""
+                        layout="fill"
+                        objectFit="contain"
+                        objectPosition="left top"
+                      />
+                    </div>
+                  </a>
+                )}
+                {post.Excerpt && <p className="excerpt">{post.Excerpt}</p>}
+              </div>
             </div>
           )
         })}

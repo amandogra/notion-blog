@@ -43,6 +43,10 @@ if (!BLOG_INDEX_ID) {
 
 module.exports = {
   target: 'experimental-serverless-trace',
+  // notion images will come from the following resources
+  images: {
+    domains: ['raw.githubusercontent.com', 's3-us-west-2.amazonaws.com'],
+  },
 
   webpack(cfg, { dev, isServer }) {
     // only compile build-rss in production server build
