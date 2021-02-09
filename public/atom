@@ -4,18 +4,33 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2021-02-03T22:08:51.454Z</updated>
+    <updated>2021-02-06T01:23:34.203Z</updated>
     <id>My Notion Blog</id>
     <entry>
       <id>/blog/testing-notion-versel-nextjs</id>
-      <title>Testing Notion, Vercel and NextJS based Blog</title>
+      <title>How to host a blog for free using Notion, Vercel and NextJS</title>
       <link href="/blog/testing-notion-versel-nextjs"/>
-      <updated>2021-02-03T08:00:00.301Z</updated>
+      <updated>2021-02-03T08:00:00.573Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           
           <p class="more">
             <a href="/blog/testing-notion-versel-nextjs">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Aman Dogra</name></author>
+    </entry>
+    <entry>
+      <id>/blog/second-post</id>
+      <title>Second post</title>
+      <link href="/blog/second-post"/>
+      <updated>2021-02-04T08:00:00.574Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/second-post">Read more</a>
           </p>
         </div>
       </content>
