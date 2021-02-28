@@ -37,6 +37,12 @@ export default ({ titlePre = '' }) => {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css"
+          integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ=="
+          crossorigin="anonymous"
+        />
       </Head>
       <div className="relative bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
